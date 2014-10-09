@@ -1,0 +1,57 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.panel-fixed1 {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  margin-left: 60px;
+  width: 300px;
+  text-align: center;
+  z-index: 50;
+}
+
+#legend table{
+	font-size:13px;
+}
+
+#legend_operational0 div{
+	padding:5;
+}
+#grid {
+  height: 200px;
+  width: 100%;
+}
+
+.field-name {
+  width: 200px;
+  font-size: .80em;
+  font-weight: normal;
+}
+
+.field-magnitude {
+  width: 50px;
+  font-size: .80em;
+  font-weight: normal;
+}
+
+.field-deaths {
+  width: 70px;
+  font-size: .80em;
+  font-weight: normal;
+}
+
+.field-date {
+  width: 70px;
+  font-size: .80em;
+  font-weight: normal;
+}
+.dgrid-row-odd {
+  background: #F2F5F9;
+}
