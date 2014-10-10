@@ -59,6 +59,19 @@
 	              recordsPerPage: 15
 	            };
 	        };
+	        function array2JSON(extendPoint){
+	        	var items = [];
+	        	var itemsN = [];
+	        	for(var n = 0;n<extendPoint.length;n++){
+	        		var x = extendPoint[n][0];
+	        		var y = extendPoint[n][1];
+	        		items.push("{x:"+x+",y:"+y+"}")
+	        		itemsN.push(x+","+y)
+	        	}
+	        	var data = "data:{["+items+"]}";
+	        	var num = "["+itemsN+"]";
+	        	return num;
+	        }
 	        
 	    	// Wire UI Events
 	    	var layerIsHide = true;
@@ -159,10 +172,20 @@
 	  		  	          var gra = new Graphic(myPolygon);
 	  		  	          map.addLayer(gl);
 	  		  	          gl.add(gra);
+	  		  	          var dataJSON = dojo.toJson(array2JSON(extendPoint));
+	  		  	          var dataStr = extendPoint;
 		  		  	      request.post("/WEBGIS/views/BasePoints", {
-		  		  	        data: {data: extendPoint},
+		  		  	        data:{
+		  		  	        	data:dataJSON,
+	  		  	        		color: "blue",
+		  		  	        	},
+//		  		  	        { 
+//		  		  	        	color: "blue",
+//	  		  	        		answer: 42,
+//		  		  	        },
 		  		  	        headers: {
-		  		  	            "X-Something": "A value"
+		  		  	        	"X-Something": "A value",
+		  		  	            "Access-Control-Allow-Origin":"*"
 		  		  	        }
 		  		  	    }).then(function(text){
 		  		  	        console.log("The server returned: ", text);

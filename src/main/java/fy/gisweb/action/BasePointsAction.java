@@ -1,10 +1,9 @@
 package fy.gisweb.action;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
-import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -20,9 +19,20 @@ public class BasePointsAction extends ActionSupport {
 	// private BasePointsService basePointsService;
 	public String BasePoints() throws IOException {
 		request = ServletActionContext.getRequest();
-		request.getParameter("data");
-		request.getAttribute("data");
+		String dataSource = request.getParameter("data");
+		String dataNum = dataSource.substring(2, dataSource.length()-2);
 		
+//		request.getAttribute("color");
+		String[] strs = dataNum.split("\\,");
+		List<Double> nums = new ArrayList<Double>();
+		for(String string:strs){
+			System.out.println(string);
+			double num=Double.parseDouble(string);
+			nums.add(num);
+		}
+		for(Double n:nums){
+			System.out.println(n);
+		}
 		// Array[] rings = requests
 		
 		// List<BasePoints> data = basePointsService.generateBasePoints(rings);

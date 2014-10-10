@@ -5,13 +5,13 @@
 
     <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/dojo/dijit/themes/claro/claro.css"/>
     <link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css" />
-    <link rel="stylesheet" href="/GISweb/stylesheets/style.css" />
+    <link rel="stylesheet" href="/WEBGIS/stylesheets/style.css" />
 
     <script src="http://js.arcgis.com/3.10/"></script>
-    <script src="/GISweb/javascripts/jquery-2.1.1.min.js"></script>
+    <script src="/WEBGIS/javascripts/jquery-2.1.1.min.js"></script>
     <script src="http://cdn.bootcss.com/angular.js/1.3.0-beta.8/angular.min.js"></script>
-    <script src="/GISweb/controllers/webgis.js"></script>
-    <!--<script src="/GISweb/controllers/dataImport.js"></script> -->
+    <script src="/WEBGIS/controllers/webgis.js"></script>
+    <!--<script src="/WEBGIS/controllers/dataImport.js"></script> -->
     <!-- Web Framework CSS - Bootstrap (getbootstrap.com) and Bootstrap-map-js (github.com/esri/bootstrap-map-js) -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">
