@@ -3,6 +3,7 @@ package fy.gisweb.action;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,7 +20,8 @@ import fy.gisweb.service.impl.ModelPointsService;
 
 public class BasePointsAction extends ActionSupport {
 	private HttpServletRequest request;
-	private HttpServletResponse response;
+//	private HttpServletResponse response;
+
 
 	// private BasePoints basePoints;
 	// private BasePointsService basePointsService;
@@ -36,10 +38,11 @@ public class BasePointsAction extends ActionSupport {
 			nums.add(num);
 		}
 		//double2XY & generateExtend
-		Points bps = new Rings(); 
+//		Points bps = new Rings(); 
 		Extend exd = new Extend();
 		ArrayList<Rings> rings = new ArrayList<Rings>();
 		for(int i = 0;i < nums.size()-2;i=i+2){
+			Points bps = new Rings(); 
 			double x = nums.get(i);
 			double y = nums.get(i+1);
 			if(i == 0){
@@ -68,9 +71,18 @@ public class BasePointsAction extends ActionSupport {
 		}
 		//generateBasePoints
 		ModelPointsService<ModelPoints> mps = new ModelPointsService<ModelPoints>();
-		double gridSize = 5;//define grid size
+		double gridSize = 50;//define grid size
 		List<ModelPoints> data = mps.generateModelPoints(rings,gridSize);
+//		this.dataMap.put("success", data);  
 		return SUCCESS;
 	}
+
+//	public Map<String, Object> getDataMap() {
+//		return dataMap;
+//	}
+//
+//	public void setDataMap(Map<String, Object> dataMap) {
+//		this.dataMap = dataMap;
+//	}
 
 }

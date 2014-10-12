@@ -112,7 +112,7 @@
 		            	
 		            	//dy add featureLayer
 	        			layerNum = layerNumArr[e.currentTarget.innerText];
-	        	        featureLayer = new FeatureLayer("http://192.168.2.127:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer/"+layerNum, {
+	        	        featureLayer = new FeatureLayer("http://192.168.2.108:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer/"+layerNum, {
 	        		          outFields:["*"]
 	        		        });
 	        	        featureLayer.on("load", function () {
@@ -140,7 +140,7 @@
 //				layerNumArr[$('#legend_operational0')[0].childNodes[n].innerText] = n;
 //				}
 //				layerNum = layerNumArr["������"];
-		        featureLayer = new FeatureLayer("http://192.168.2.127:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer/12", {
+		        featureLayer = new FeatureLayer("http://192.168.2.108:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer/12", {
 			          outFields:["*"]
 			    });
     	        featureLayer.on("load", function () {
@@ -233,7 +233,7 @@
 	        };
 	        webmap.itemData = {
 	          "operationalLayers": [{
-	            "url": "http://192.168.2.127:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer",
+	            "url": "http://192.168.2.108:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer",
 	            "visibility": true,
 	            "opacity": 0.75,
 	            "title": "     ",
@@ -243,12 +243,12 @@
 	            "baseMapLayers": [{
 	              "opacity": 1,
 	              "visibility": true,
-	              "url": "http://192.168.2.127:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer"
+	              "url": "http://192.168.2.108:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer"
 	              },{
 	              "isReference": true,
 	              "opacity": 1,
 	              "visibility": true,
-	              "url": "http://192.168.2.127:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer"
+	              "url": "http://192.168.2.108:6080/arcgis/rest/services/webgis/gisServiceFeng/MapServer"
 	              }],
 	            "title": "World_Terrain_Base"
 	          },
